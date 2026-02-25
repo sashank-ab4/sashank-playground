@@ -30,7 +30,7 @@ export default function Navbar() {
           ))}
         </nav>
         <div>
-          <button className="px-4 py-2 border rounded-full hover:bg-[#323232]/40  transition cursor-pointer">
+          <button className="px-4 py-2  rounded-full hover:bg-[#323232]/40  transition cursor-pointer">
             <FaGithub size={26} />
           </button>
         </div>
