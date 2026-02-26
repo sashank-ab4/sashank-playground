@@ -3,6 +3,10 @@ import App from "../layout/AppLayout";
 import About from "../pages/AboutPage";
 import Contact from "../pages/ContactPage";
 import HeroSection from "../components/HeroSec";
+import Playground from "../layout/Playground";
+
+import PlaygroundHome from "../components/PlaygroundContent";
+import { categoryRoutes } from "../../Utils/categoryRoutes";
 
 export const router = createBrowserRouter([
   {
@@ -13,6 +17,7 @@ export const router = createBrowserRouter([
         index: true,
         element: <HeroSection />,
       },
+
       {
         path: "about",
         element: <About />,
@@ -20,6 +25,18 @@ export const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
+      },
+
+      {
+        path: "playground",
+        element: <Playground />,
+        children: [
+          {
+            index: true,
+            element: <PlaygroundHome />,
+          },
+          ...categoryRoutes,
+        ],
       },
     ],
   },
