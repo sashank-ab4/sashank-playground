@@ -7,7 +7,7 @@ export default function Navbar() {
     { page: "Contact", path: "/contact" },
   ];
   return (
-    <header className=" absolute top-0 left-0 w-full h-20 shadow-md bg-[#ddd0c8]">
+    <header className=" sticky top-0 left-0 w-full h-20 shadow-md bg-[#ddd0c8]">
       <div className=" max-w-7xl mx-auto h-full flex items-center justify-between px-6">
         <div className=" text-xl font-bold tracking-wider uppercase">
           Sashank
