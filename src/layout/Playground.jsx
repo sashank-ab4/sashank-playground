@@ -41,7 +41,7 @@ export default function Playground() {
                 }
                 className={`w-full flex items-center justify-between 
              px-3 py-2 rounded-md text-lg uppercase tracking-wider
-              transition-all duration-200 ${openCategory === category.title ? "bg-gray-100 text-[#6c86ab]" : "hover:bg-gray-100"}`}
+              transition-all duration-200 ${openCategory === category.title ? "bg-[#6c86ab] text-[white]" : ""}`}
               >
                 {category.title}
                 <IoIosArrowForward
@@ -60,7 +60,7 @@ export default function Playground() {
                         `text-sm px-2 py-1 rounded ${
                           isActive
                             ? "bg-[#6c86ab] text-white"
-                            : "hover:bg-gray-200"
+                            : "hover:bg-gray-200 text-[#6c86ab]"
                         }`
                       }
                     >
@@ -72,12 +72,7 @@ export default function Playground() {
             </div>
           ))}
         </aside>
-        <main
-          className={`
-      flex-1 transition-all duration-300
-      ${isOpen ? "ml-0" : "ml-0"}
-    `}
-        >
+        <main>
           <Outlet />
         </main>
       </div>
