@@ -1,4 +1,5 @@
-import Todo from "../src/playground/Todo";
+import SeatBooking from "../src/playgroundApps/CinemaHall";
+import Todo from "../src/playgroundApps/Todo";
 
 export const categoriesAndItems = [
   {
@@ -28,6 +29,16 @@ export const categoriesAndItems = [
         name: "Calculator",
         path: "calculator",
         component: Todo,
+      },
+    ],
+  },
+  {
+    title: "Interfaces",
+    items: [
+      {
+        name: "Cinema Hall",
+        path: "cinema-hall",
+        component: SeatBooking,
       },
     ],
   },
