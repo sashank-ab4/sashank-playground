@@ -111,7 +111,7 @@ const Todo = () => {
                   type="checkbox"
                   checked={todo.completed}
                   onChange={() => toggleTodo(todo.id)}
-                  className="w-4 h-4 accent-[#995170] cursor-pointer"
+                  className="w-4 h-4 appearance-none peer relative border-2 border-gray-300 rounded-full bg-white checked:bg-[#4bb543] checked:border-[#4bb543] cursor-pointer"
                 />
 
                 {editingId === todo.id ? (
@@ -135,13 +135,13 @@ const Todo = () => {
                   <>
                     <button
                       onClick={() => handleSave(todo.id)}
-                      className="text-green-500 hover:text-green-700 font-semibold"
+                      className="text-green-500 hover:text-green-700 font-semibold cursor-pointer"
                     >
                       <MdOutlineFileDownloadDone size={22} />
                     </button>
                     <button
                       onClick={handleCancel}
-                      className="text-red-400 hover:text-red-600"
+                      className="text-red-400 hover:text-red-600 cursor-pointer"
                     >
                       <MdClose size={22} />
                     </button>
