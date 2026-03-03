@@ -1,4 +1,5 @@
 import SeatBooking from "../src/playgroundApps/CinemaHall";
+import SocialMedia from "../src/playgroundApps/SocialMedia";
 import Todo from "../src/playgroundApps/Todo";
 
 export const categoriesAndItems = [
@@ -39,6 +40,11 @@ export const categoriesAndItems = [
         name: "Cinema Hall",
         path: "cinema-hall",
         component: SeatBooking,
+      },
+      {
+        name: "Social Media",
+        path: "social-media",
+        component: SocialMedia,
       },
     ],
   },
