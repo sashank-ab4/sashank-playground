@@ -1,4 +1,5 @@
 import SeatBooking from "../src/playgroundApps/CinemaHall";
+import OtpInput from "../src/playgroundApps/otpInput";
 import SocialMedia from "../src/playgroundApps/SocialMedia";
 import Todo from "../src/playgroundApps/Todo";
 
@@ -45,6 +46,11 @@ export const categoriesAndItems = [
         name: "Social Media",
         path: "social-media",
         component: SocialMedia,
+      },
+      {
+        name: "OTP Input",
+        path: "otp-input",
+        component: OtpInput,
       },
     ],
   },
