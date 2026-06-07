@@ -1,4 +1,6 @@
 import SeatBooking from "../src/playgroundApps/CinemaHall";
+import DataListExp from "../src/playgroundApps/DataList";
+import MultipleForms from "../src/playgroundApps/MultipleForms";
 import OtpInput from "../src/playgroundApps/otpInput";
 import SocialMedia from "../src/playgroundApps/SocialMedia";
 import Todo from "../src/playgroundApps/Todo";
@@ -51,6 +53,16 @@ export const categoriesAndItems = [
         name: "OTP Input",
         path: "otp-input",
         component: OtpInput,
+      },
+      {
+        name: "Data List",
+        path: "data-list",
+        component: DataListExp,
+      },
+      {
+        name: "Multiple Forms",
+        path: "multiple-forms",
+        component: MultipleForms,
       },
     ],
   },

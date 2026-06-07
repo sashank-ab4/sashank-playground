@@ -40,7 +40,7 @@ export default function OtpInput() {
           />
         );
       })}
-      <button className="border p-0.5 bg-green-400 rounded-md border-green-100 cursor-pointer ml-2 font-light">
+      <button className="border p-0.5 bg-green-400 rounded-md border-green-100 cursor-pointer ml-2 font-light ">
         Check
       </button>
     </div>
