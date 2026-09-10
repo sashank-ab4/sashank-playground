@@ -9,15 +9,16 @@ export default function Playground() {
 
   return (
     <>
-      <div className=" fixed flex min-h-[90vh]">
+      {/* Removed 'flex' from the outer fixed container to prevent layout breaking */}
+      <div className="fixed top-[10vh] left-0 w-full h-[90vh] flex">
         <aside
           className={`
-      w-64 bg-black text-white p-6
-      transform transition-transform duration-300 ease-in-out
-      ${isOpen ? "translate-x-0" : "-translate-x-full"}
-    `}
+          w-64 bg-black text-white p-6 shrink-0 overflow-y-auto h-full
+          transform transition-transform duration-300 ease-in-out
+          ${isOpen ? "translate-x-0" : "-translate-x-full"}
+        `}
         >
-          <h2 className=" flex justify-between text-lg font-bold uppercase tracking-wide mb-6">
+          <h2 className="flex justify-between text-lg font-bold uppercase tracking-wide mb-6">
             Playground
             <button
               className="border rounded bg-gray-500 p-1"
@@ -40,8 +41,8 @@ export default function Playground() {
                   )
                 }
                 className={`w-full flex items-center justify-between 
-             px-3 py-2 rounded-md text-lg uppercase tracking-wider
-              transition-all duration-200 ${openCategory === category.title ? "bg-[#6c86ab] text-[white]" : ""}`}
+           px-3 py-2 rounded-md text-lg uppercase tracking-wider
+            transition-all duration-200 ${openCategory === category.title ? "bg-[#6c86ab] text-[white]" : ""}`}
               >
                 {category.title}
                 <IoIosArrowForward
@@ -51,7 +52,7 @@ export default function Playground() {
                 />
               </button>
               {openCategory === category.title && (
-                <div className=" flex flex-col gap-2 pl-3 mt-2">
+                <div className="flex flex-col gap-2 pl-3 mt-2">
                   {category.items.map((item) => (
                     <NavLink
                       key={item.path}
@@ -72,7 +73,9 @@ export default function Playground() {
             </div>
           ))}
         </aside>
-        <main>
+
+        {/* Added flex-1 to take remaining space, and overflow-y-auto to allow vertical scrolling */}
+        <main className="flex-1 h-full overflow-y-auto p-6">
           <Outlet />
         </main>
       </div>
